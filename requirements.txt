@@ -1,0 +1,30 @@
+# Data Ingestion
+youtube-transcript-api
+trafilatura
+feedparser
+beautifulsoup4
+requests
+yt-dlp
+
+# Vector DB & Embeddings
+qdrant-client
+sentence-transformers
+
+# Training (install on Kaggle/Colab, not locally)
+torch
+transformers
+peft
+trl
+bitsandbytes
+datasets
+accelerate
+
+# RAG & Inference
+langchain
+langchain-community
+langchain-huggingface
+
+# Utilities
+python-dotenv
+tqdm
+pandas

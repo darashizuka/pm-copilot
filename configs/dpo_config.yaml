@@ -1,0 +1,34 @@
+model:
+  name: "./outputs/sft"  # Start from the SFT checkpoint
+  quantization: "4bit"
+  dtype: "bfloat16"
+
+lora:
+  r: 16
+  lora_alpha: 32
+  target_modules: ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+  lora_dropout: 0.05
+  task_type: "CAUSAL_LM"
+
+dpo:
+  beta: 0.1
+  loss_type: "sigmoid"
+
+training:
+  output_dir: "./outputs/dpo"
+  num_train_epochs: 3
+  per_device_train_batch_size: 2
+  gradient_accumulation_steps: 8
+  learning_rate: 5.0e-5
+  lr_scheduler_type: "cosine"
+  warmup_steps: 3
+  weight_decay: 0.01
+  max_length: 2048
+  max_prompt_length: 1024
+  logging_steps: 10
+  save_strategy: "epoch"
+  bf16: true
+
+dataset:
+  path: "shizukadara2/pm-copilot-dpo"
+  split: "train"

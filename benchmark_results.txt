@@ -1,0 +1,18 @@
+============================================================
+BENCHMARK RESULTS (10 requests)
+============================================================
+Latency (seconds):
+  Mean:   13.215
+  Median: 15.177
+  P95:    15.836
+  Min:    1.547
+  Max:    15.836
+
+Throughput:
+  Mean tokens/sec:   15.8
+  Median tokens/sec: 16.3
+  Total tokens:      2158
+  Total time:        132.1s
+
+PagedAttention: enabled
+RAG augmented:  True
