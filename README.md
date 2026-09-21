@@ -1,4 +1,4 @@
-# PM Copilot — AI Product Manager & Product Sense Copilot
+# PM Copilot: AI Product Manager & Product Sense Copilot
 
 An end-to-end ML system that writes PRDs, solves product sense cases, and evaluates feature trade-offs using real industry case studies. Built with a full production pipeline: data ingestion, RAG, QLoRA fine-tuning (SFT + DPO), and vLLM deployment.
 
