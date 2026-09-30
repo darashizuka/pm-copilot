@@ -1,0 +1,15 @@
+name: Qdrant Keep-Alive
+
+on:
+  schedule:
+    - cron: '0 12 * * *'  # daily at noon UTC
+  workflow_dispatch:       # manual trigger
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Qdrant Cloud
+        run: |
+          curl -sf -H "api-key: ${{ secrets.QDRANT_API_KEY }}" \
+            "https://c8ba5482-b31e-4500-b2ca-7ca309ee5cdb.us-east-1-1.aws.cloud.qdrant.io:6333/collections"
