@@ -2,7 +2,7 @@ name: Qdrant Keep-Alive
 
 on:
   schedule:
-    - cron: '0 12 * * *'  # daily at noon UTC
+    - cron: '0 12 */5 * *'  # every 5 days at noon UTC
   workflow_dispatch:       # manual trigger
 
 jobs:
